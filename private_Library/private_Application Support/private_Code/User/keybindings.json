@@ -1,0 +1,29 @@
+[
+    // Toggle and focus left sidebar
+    {
+        "key": "cmd+h",
+        "command": "workbench.action.focusSideBar",
+        "when": "!sideBarFocus"
+    },
+    {
+        "key": "cmd+h",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "sideBarFocus"
+    },
+    // Toggle and focus right sidebar (VSCode default needs to be disabled first)
+    {
+        "key": "cmd+l",
+        "command": "-expandLineSelection",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "cmd+l",
+        "command": "workbench.action.focusAuxiliaryBar",
+        "when": "!activeAuxiliary"
+    },
+    {
+        "key": "cmd+l",
+        "command": "workbench.action.toggleAuxiliaryBar",
+        "when": "activeAuxiliary"
+    },
+]

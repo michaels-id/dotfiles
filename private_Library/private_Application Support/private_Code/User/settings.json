@@ -1,0 +1,265 @@
+{
+  // -------------------------------------------------------------------------------------------------------------
+  //  ### VSCode Settings ###
+  //  Optimized for minimalism with keyboard-focused workflow (Logitech Ergo K860 German Mac)
+  //  Created by: Michael Mielemeier
+  // -------------------------------------------------------------------------------------------------------------
+  // -------------------------------------------------------------------------------------------------------------
+  //  Workbench Settings
+  // -------------------------------------------------------------------------------------------------------------
+  // Don't show the Welcome page of VSCode for less distraction
+  "workbench.startupEditor": "none",
+  // Explorer, Git etc. buttons on top instead left for even more space when hiding sidebar
+  "workbench.activityBar.location": "top",
+  // Slack Dark theme shows modules and structs in different colors
+  "workbench.colorTheme": "Developers Theme - Slack Dark",
+  // -------------------------------------------------------------------------------------------------------------
+  //  Editor Settings
+  // -------------------------------------------------------------------------------------------------------------
+  // Relative line numbers for easier vim navigation
+  // "editor.lineNumbers": "relative",
+  // Don't stick the function name on top for less distraction when scrolling
+  "editor.stickyScroll.enabled": false,
+  // Stop flickering highlights for less distraction when navigating through the code
+  "editor.occurrencesHighlight": "off",
+  "editor.selectionHighlight": false,
+  "editor.matchBrackets": "near",
+  "editor.renderLineHighlight": "none",
+  "editor.guides.highlightActiveIndentation": false,
+  // Don't underline mutable variables and methods for less distraction
+  "editor.semanticTokenColorCustomizations": {
+    "enabled": true,
+    "rules": {
+      "*.mutable": {
+        "underline": false,
+      }
+    }
+  },
+  // Always format the code on save, otherwise a later format causes unnecessary changes in git commit
+  "editor.formatOnSave": true,
+  // Don't show overview map next to the scrollbar for less distraction
+  "editor.minimap.enabled": false,
+  // Show data types only when pressing Ctrl+Option to stop distracting code jumps during typing
+  "editor.inlayHints.enabled": "offUnlessPressed",
+  // Hide the light bulb for possible code actions for less distraction
+  "editor.lightbulb.enabled": "off",
+  // -------------------------------------------------------------------------------------------------------------
+  //  Rust-Analyzer Settings
+  // -------------------------------------------------------------------------------------------------------------
+  // Analyze also feature-gated code, by default the code is grayed out
+  "rust-analyzer.cargo.features": "all",
+  // Run Clippy on save for code optimization tips
+  "rust-analyzer.checkOnSave": true,
+  "rust-analyzer.check.command": "clippy",
+  // Show short ErrorCode link instead of long "rustc(Click for full compiler diagnostics)" link in error messages
+  "rust-analyzer.diagnostics.useRustcErrorCode": true,
+  // Hide info lines with implementation count and Run/Debug/Test commands for less distraction
+  "rust-analyzer.lens.enable": false,
+  // -------------------------------------------------------------------------------------------------------------
+  //  VSCodeVim Settings
+  // -------------------------------------------------------------------------------------------------------------
+  // Enable Easymotion for quicker moving via searching letters in the current view 
+  "vim.easymotion": true,
+  // Always use the system clipboard for easier copy and paste between applications
+  "vim.useSystemClipboard": true,
+  // Highlight yanked text for 500 ms for better visibility of yanked text
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.duration": 500,
+  // -------------------------------------------------------------------------------------------------------------
+  //  VSCodeVim Keybindings
+  // -------------------------------------------------------------------------------------------------------------
+  // Space is much easier to type than backspace as leader key
+  "vim.leader": "<Space>",
+  // Normal Mode Keybinding changes
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      // Toggle between last active tabs
+      "before": [
+        "leader",
+        "j"
+      ],
+      "after": [
+        "<C-6>"
+      ],
+    },
+    {
+      // Run all tests
+      "before": [
+        "leader",
+        "t"
+      ],
+      "commands": [
+        "testing.runAll"
+      ],
+    },
+    {
+      // Navigate to left editor
+      "before": [
+        "<C-h>"
+      ],
+      "commands": [
+        "workbench.action.previousEditor"
+      ],
+    },
+    {
+      // Navigate to lower group
+      "before": [
+        "<C-j>"
+      ],
+      "commands": [
+        "workbench.action.focusBelowGroup"
+      ],
+    },
+    {
+      // Navigate to upper group
+      "before": [
+        "<C-k>"
+      ],
+      "commands": [
+        "workbench.action.focusAboveGroup"
+      ],
+    },
+    {
+      // Navigate to right editor
+      "before": [
+        "<C-l>"
+      ],
+      "commands": [
+        "workbench.action.nextEditor"
+      ],
+    },
+    {
+      // 'ö' to trigger EasyMotion search
+      "before": [
+        "ö"
+      ],
+      "after": [
+        "leader",
+        "leader",
+        "s"
+      ],
+    },
+    {
+      // Jump to start of line
+      "before": [
+        "H"
+      ],
+      "after": [
+        "^"
+      ],
+    },
+    {
+      // Jump to end of line
+      "before": [
+        "L"
+      ],
+      "after": [
+        "$"
+      ],
+    },
+    {
+      // Show Hover Info (quicker than default 'gh')
+      "before": [
+        "leader",
+        "k"
+      ],
+      "commands": [
+        "editor.action.showHover"
+      ],
+    },
+    {
+      // Rename Symbol
+      "before": [
+        "leader",
+        "r"
+      ],
+      "commands": [
+        "editor.action.rename"
+      ],
+    },
+    {
+      // Code Action
+      "before": [
+        "leader",
+        "a"
+      ],
+      "commands": [
+        "editor.action.quickFix"
+      ],
+    },
+    {
+      // Jump to next error
+      "before": [
+        "leader",
+        "e"
+      ],
+      "commands": [
+        "editor.action.marker.nextInFiles"
+      ]
+    },
+    {
+      // Rust-Analyzer: Expand Macro
+      "before": [
+        "leader",
+        "m"
+      ],
+      "commands": [
+        "rust-analyzer.expandMacro"
+      ],
+    },
+    {
+      // Rust-Analyzer: Popup for runnables like main() or Tests near to cursor
+      "before": [
+        "leader",
+        "g"
+      ],
+      "commands": [
+        "rust-analyzer.run"
+      ],
+    },
+    {
+      // Rust-Analyzer: Open docs.rs documentation for Symbol in Web-Browser
+      "before": [
+        "leader",
+        "o"
+      ],
+      "commands": [
+        "rust-analyzer.openDocs"
+      ],
+    },
+  ],
+  // Insert Mode Keybinding changes
+  "vim.insertModeKeyBindingsNonRecursive": [
+    {
+      // 'jk' in the home row is more accessible than 'Esc'
+      "before": [
+        "j",
+        "k"
+      ],
+      "after": [
+        "<ESC>"
+      ],
+    },
+  ],
+  // -------------------------------------------------------------------------------------------------------------
+  //  Other Settings
+  // -------------------------------------------------------------------------------------------------------------
+  // Show Error/Warn/Info/Hint (first letter) before line numbers (in the Breakpoints column)
+  "errorLens.gutterIconsEnabled": true,
+  "errorLens.gutterIconSet": "letter",
+  // Hide AI Features like Copilot in VSCode. Instead I use Gemini in a separate app for questions.
+  "chat.disableAIFeatures": true,
+  // Hide terminal command suggestions for less distraction
+  "terminal.integrated.initialHint": false,
+  // Hide breadcrumbs on top for less distraction. Outline in hideable sidebar has the same function.
+  "breadcrumbs.enabled": false,
+  // Hide release notes after updates for less distraction
+  "update.showReleaseNotes": false,
+  // Hide notifications after updates for less distraction
+  "lldb.suppressUpdateNotifications": true,
+  // Hide Git commit information in the Statusbar for less distraction when scrolling
+  "git.blame.statusBarItem.enabled": false,
+  // -------------------------------------------------------------------------------------------------------------
+  //  Automatically generated Settings (VSCode adds settings via GUI at the bottom)
+  // -------------------------------------------------------------------------------------------------------------
+}

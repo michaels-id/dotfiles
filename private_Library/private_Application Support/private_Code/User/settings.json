@@ -11,6 +11,10 @@
   "workbench.startupEditor": "none",
   // Explorer, Git etc. buttons on top instead left for even more space when hiding sidebar
   "workbench.activityBar.location": "top",
+  // Hide Browser Icon in the TitleBar for less distraction
+  "workbench.browser.showInTitleBar": false,
+  // Hide navigation arrows in the TitleBar for less distraction
+  "workbench.navigationControl.enabled": false,
   // Slack Dark theme shows modules and structs in different colors
   "workbench.colorTheme": "Developers Theme - Slack Dark",
   // -------------------------------------------------------------------------------------------------------------
@@ -247,6 +251,26 @@
         "rust-analyzer.openDocs"
       ],
     },
+    {
+      // cSpell: Toggle Spell Check
+      "before": [
+        "leader",
+        "s"
+      ],
+      "commands": [
+        "cSpell.toggleEnableForGlobal"
+      ],
+    },
+    {
+      // Rest-Client: Send HTTP Request
+      "before": [
+        "leader",
+        "h"
+      ],
+      "commands": [
+        "rest-client.request"
+      ],
+    },
   ],
   // Insert Mode Keybinding changes
   "vim.insertModeKeyBindingsNonRecursive": [
@@ -264,6 +288,8 @@
   // -------------------------------------------------------------------------------------------------------------
   //  Other Settings and automatically set Settings (VSCode adds them at the bottom without a comment)
   // -------------------------------------------------------------------------------------------------------------
+  // Hide Search bar in the TitleBar for less distraction
+  "window.commandCenter": false,
   // Show Error/Warn/Info/Hint (first letter) before line numbers (in the Breakpoints column)
   "errorLens.gutterIconsEnabled": true,
   "errorLens.gutterIconSet": "letter",
@@ -283,4 +309,6 @@
   "git.enableSmartCommit": true,
   // No pop-up question, if I really want to sync the repository
   "git.confirmSync": false,
+  // Disable Spell check by default for less distraction, enable temporary via Shortcut
+  "cSpell.enabled": false,
 }

@@ -307,8 +307,14 @@
   "git.blame.statusBarItem.enabled": false,
   // If Stage is empty, commit all files during commit
   "git.enableSmartCommit": true,
-  // No pop-up question, if I really want to sync the repository
+  // Do not require confirm for sync to GitHub
   "git.confirmSync": false,
   // Disable Spell check by default for less distraction, enable temporary via Shortcut
   "cSpell.enabled": false,
+  // Do not require confirm for moving files
+  "explorer.confirmDragAndDrop": false,
+  // Do not require confirm for deleting files
+  "explorer.confirmDelete": false,
+  // Do not show cascaded folders in one line, it makes moving files more difficult
+  "explorer.compactFolders": false,
 }

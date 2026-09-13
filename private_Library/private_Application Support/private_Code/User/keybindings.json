@@ -26,4 +26,22 @@
         "command": "workbench.action.toggleAuxiliaryBar",
         "when": "activeAuxiliary"
     },
+    // Create a new file, when Explorer is focused
+    {
+        "key": "cmd+n",
+        "command": "explorer.newFile",
+        "when": "explorerViewletFocus"
+    },
+    // Create a new folder, when Explorer is focused
+    {
+        "key": "cmd+m",
+        "command": "explorer.newFolder",
+        "when": "explorerViewletFocus"
+    },
+    // Open a file to the side like a split, when Explorer is focused
+    {
+        "key": "shift+l",
+        "command": "explorer.openToSide",
+        "when": "explorerViewletFocus && foldersViewVisible && !inputFocus"
+    },
 ]

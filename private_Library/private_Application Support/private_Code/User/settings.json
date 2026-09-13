@@ -158,6 +158,26 @@
       ],
     },
     {
+      // Jump up by visual line (relevant for wrapped markdown files)
+      "before": [
+        "j"
+      ],
+      "after": [
+        "g",
+        "j"
+      ],
+    },
+    {
+      // Jump down by visual line (relevant for wrapped markdown files)
+      "before": [
+        "k"
+      ],
+      "after": [
+        "g",
+        "k"
+      ],
+    },
+    {
       // Show Hover Info (quicker than default 'gh')
       "before": [
         "leader",
@@ -242,7 +262,7 @@
     },
   ],
   // -------------------------------------------------------------------------------------------------------------
-  //  Other Settings
+  //  Other Settings and automatically set Settings (VSCode adds them at the bottom without a comment)
   // -------------------------------------------------------------------------------------------------------------
   // Show Error/Warn/Info/Hint (first letter) before line numbers (in the Breakpoints column)
   "errorLens.gutterIconsEnabled": true,
@@ -259,7 +279,8 @@
   "lldb.suppressUpdateNotifications": true,
   // Hide Git commit information in the Statusbar for less distraction when scrolling
   "git.blame.statusBarItem.enabled": false,
-  // -------------------------------------------------------------------------------------------------------------
-  //  Automatically generated Settings (VSCode adds settings via GUI at the bottom)
-  // -------------------------------------------------------------------------------------------------------------
+  // If Stage is empty, commit all files during commit
+  "git.enableSmartCommit": true,
+  // No pop-up question, if I really want to sync the repository
+  "git.confirmSync": false,
 }

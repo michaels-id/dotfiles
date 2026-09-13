@@ -27,8 +27,10 @@ My favorite programming language is [Rust](https://rust-lang.org/).
     - [Test Explorer UI](https://marketplace.visualstudio.com/items?itemName=hbenl.vscode-test-explorer) (Rust Unit Tests)
     - [Test Adapter Converter](https://marketplace.visualstudio.com/items?itemName=ms-vscode.test-adapter-converter) (Rust Unit Tests)
     - [Rust Test Explorer](https://marketplace.visualstudio.com/items?itemName=swellaby.vscode-rust-test-adapter) (Rust Unit Tests)
-    - [Error Lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens) (Inline Error Messages)
     - [CodeLLDB](https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb) (Debugging)
+    - [Error Lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens) (Inline Error Messages)
+    - [CodeSpellChecker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) (Spell Check)
+    - [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) (HTTP REST Client)
     - [SQLite Viewer](https://marketplace.visualstudio.com/items?itemName=qwtel.sqlite-viewer) (DB Viewer)
 - [NeoVim](https://neovim.io/) as Terminal IDE
 - [Chrome](https://www.google.com/intl/en-us/chrome/) as web browser
